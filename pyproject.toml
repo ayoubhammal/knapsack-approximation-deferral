@@ -1,0 +1,43 @@
+[project]
+name = "knapsack-approximation-deferral"
+version = "0.1.0"
+description = "Knapsack approximation deferral"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "transformers",
+    "torch>=2.6.0",
+    "torchvision",
+    "torchaudio",
+
+    "accelerate",
+    "sentencepiece",
+    "datasets",
+    "matplotlib",
+    "seaborn",
+    "numpy",
+    "scipy",
+    "tqdm",
+    "protobuf",
+    "jupyter",
+    "jupyter-core",
+    "joblib",
+    "tiktoken",
+    "hf_xet",
+]
+
+[tool.uv.sources]
+torch = [
+{ index = "pytorch-cu124" },
+]
+torchvision = [
+{ index = "pytorch-cu124" },
+]
+torchaudio = [
+{ index = "pytorch-cu124" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
